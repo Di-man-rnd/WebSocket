@@ -1,0 +1,1 @@
+/home/mint/store/tmp/py/soc/dashboard/static/dashboard/js/init.js

@@ -1,0 +1,37 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}DASHBOARD{% endblock %}
+
+{% block extrahead %}
+    <script src="{{ STATIC_URL }}dashboard/js/jquery-3.1.1.min.js" type="application/javascript"></script>
+    <script src="{{ STATIC_URL }}dashboard/js/init.js" type="application/javascript"></script>
+{% endblock %}
+
+{% block extrastyle %}
+    <style>
+        #thermometer{
+            background-image: url('/static/dashboard/img/img.png');
+            width: 61px;
+            height: 214px;
+            float: left;
+            position: relative;
+        }
+        #thermometer .scale{
+            background-color: #c18974;
+            width: 3px;
+            left: 18px;
+            position: absolute;
+            height: 0;
+            bottom: 25px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {{ super }}
+    <div id="thermometer">
+        <div class="scale"></div>
+    </div>
+    <div id="temperature">Температура: <span></span> C<sup>0</sup></div>
+    <button id="reset" type="button" class="btn btn-danger">Reset temperature</button>
+{% endblock %}
