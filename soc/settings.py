@@ -17,6 +17,7 @@ INSTALLED_APPS = [
 
     'dashboard.apps.DashboardConfig',
     'channels',
+    'skipass',
 ]
 
 
