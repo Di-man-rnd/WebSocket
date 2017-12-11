@@ -10,3 +10,7 @@ class Skipass(models.Model):
     time_from = models.CharField(max_length=10)
     time_to = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.name
+
+
